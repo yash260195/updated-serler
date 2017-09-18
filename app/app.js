@@ -13,6 +13,7 @@ app.locals.siteTitle = 'SERLER';
 app.use(express.static('app/public'));
 app.use(require('./routes/index')); 
 app.use(require('./routes/speakers')); 
+app.use(require('./routes/articles'));
 
 var server = app.listen(app.get('port'), function(){
 	console.log('listening on port ' + app.get('port'));

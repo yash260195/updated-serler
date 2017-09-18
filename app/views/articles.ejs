@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+  <head><% include partials/template/head.ejs %></head>
+  <body id="<%= pageID %>">
+      <% include partials/template/header.ejs %>
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-6">
+            <h1 class="feedback-form-title">Fill up article submission form</h1>
+            <form class="feedback-form">
+              <div class="form-group">
+                <label for="feedback-form-name">Title</label>
+                <input type="text" class="form-control" id="feedback-form-name" placeholder="Enter your name">
+              </div>
+  
+              <div class="form-group">
+                <label for="feedback-form-title">Author/s</label>
+                <input type="text" class="form-control" id="feedback-form-title" placeholder="Title of your feedback">
+              </div>
+
+              <div class="form-group">
+                <label for="feedback-form-title">Year</label>
+                <input class="date-own form-control" class="form-control" id="article-year" style="width: 150px;" type="text" placeholder="Year">
+              </div>
+             
+  
+              <div class="form-group">
+                <label for="feedback-form-title">Month</label>
+                <input class="month-own form-control" class="form-control" id="article-month" style="width: 150px;" type="text" placeholder="Month">
+              </div>
+
+              <div class="form-group">
+                <label for="feedback-form-title">Source</label>
+                <input type="text" class="form-control" id="feedback-form-title" placeholder="Title of your feedback">
+              </div>
+
+              <div class="form-group">
+                <label for="feedback-form-title">DOI (link)</label>
+                <input type="text" class="form-control" id="feedback-form-title" placeholder="Title of your feedback">
+              </div>
+
+              <div class="form-group">
+                <label for="feedback-form-title">Number</label>
+                <input type="text" class="form-control" id="feedback-form-title" placeholder="Title of your feedback">
+              </div>
+
+              <div class="form-group">
+                <label for="feedback-form-title">Volume</label>
+                <input type="text" class="form-control" id="feedback-form-title" placeholder="Title of your feedback">
+              </div>
+
+              <div class="form-group">
+                <label for="feedback-form-title">Page Numbers</label>
+                <input type="text" class="form-control" id="feedback-form-title" placeholder="Title of your feedback">
+              </div>
+
+              <div class="form-group">
+                <label for="feedback-form-title">Credibility rating</label>
+                <input type="text" class="form-control" id="feedback-form-title" placeholder="Title of your feedback">
+              </div>
+
+              <div class="form-group">
+                  <label for="feedback-form-message">Comments</label>
+                  <textarea type="text" placeholder="Enter your message, then hit the submit"  class="form-control" id="feedback-form-message" rows="6"></textarea>
+              </div>
+              <button type="submit" class="btn btn-default pull-right">Submit</button>
+            </form>
+          </div><!-- primary -->
+          <aside class="col-sm-3">
+            <div class="maincontent feedback">
+                <h2 class="article-title">Recent Feedback</h2>
+                <div class="feedback-messages"></div>
+            </div>
+          </aside><!-- secondary -->
+        </div>
+      </div><!-- container -->
+    <% include partials/template/jsdefaults.ejs %>
+    <% include partials/template/yearpicker.ejs %>
+    <% include partials/template/monthpicker.ejs %>
+    
+  </body>
+</html>
