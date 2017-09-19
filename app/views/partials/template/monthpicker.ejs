@@ -6,8 +6,22 @@
 
 
 <script type="text/javascript">
-    $('.month-own').datepicker({
-        minViewMode: 1,
-        format: 'MM'
+    $("#article-month").datepicker({        
+        minViewMode: "months",
+        startView: "months",
+        format: 'MM'    
     });
 </script>
+
+<style type="text/css">
+    .datepicker-switch{
+        visibility: hidden !important;
+    }
+    .prev{
+        visibility: hidden !important;
+    }
+    .next{
+        visibility: hidden !important;
+    }
+    h1, h2, h3, h4, h5, h6 {color: #C1343F;}
+</style>
