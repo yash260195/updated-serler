@@ -4,7 +4,7 @@
   "description": "\"# serlerrepo\"",
   "main": "app/app.js",
   "scripts": {
-    "start": "nodemon -e css,ejs,js,json --watch app"
+    "start": "nodemon -e css,ejs,js,json --watch app --ignore articlesubmitted.json"
   },
   "repository": {
     "type": "git",
@@ -20,6 +20,7 @@
     "body-parser": "^1.18.1",
     "ejs": "^2.5.7",
     "express": "^4.15.4",
+    "express-validator": "^4.1.1",
     "json-loader": "^0.5.7",
     "reload": "^2.2.2"
   }

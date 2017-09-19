@@ -15,7 +15,22 @@ router.use(bodyParser.urlencoded({ extended: false}));
 router.post('/api', function(req, res) {
 	articleData.unshift(req.body);
     fs.writeFile('app/data/articlesubmitted.json', JSON.stringify(articleData), 'utf8', 
-        function(err) { console.log(err)} );
+        function(err) { 
+            if(err){
+            console.log(err);
+            }
+        });
+	res.json(articleData);
+});
+
+router.delete('/api/:id', function(req, res) {
+	articleData.splice(req.params.id, 1);
+    fs.writeFile('app/data/articlesubmitted.json', JSON.stringify(articleData), 'utf8', 
+        function(err) { 
+            if(err){
+            console.log(err);
+            }
+        });
 	res.json(articleData);
 });
 

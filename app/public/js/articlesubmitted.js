@@ -14,14 +14,39 @@ $('.feedback-form').submit(function(e) {
     number:$('#feedback-form-number').val(),
     volume:$('#feedback-form-volume').val(),
     pagenumber:$('#feedback-form-pagenumbers').val()
-	}, updateArticle);
+  }, updateArticle);
+  clearArticle();
 });
+function clearArticle()
+{
+  document.querySelector('#feedback-form-title').value='';
+  document.querySelector('#feedback-form-author').value='';
+  document.querySelector('#feedback-form-year').value='';
+  document.querySelector('#feedback-form-month').value='';
+  document.querySelector('#feedback-form-source').value='';
+  document.querySelector('#feedback-form-doi').value='';
+  document.querySelector('#feedback-form-number').value='';
+  document.querySelector('#feedback-form-volume').value='';
+  document.querySelector('#feedback-form-pagenumbers').value='';
+}
+
+//To delete from recent submission
+$('.feedback-messages').on('click', function(e) {
+   if(e.target.className == "feedback-delete btn btn-xs btn-danger") {
+      $.ajax({
+      url: 'api/' + e.target.id,
+      type: 'DELETE',
+      success: updateArticle
+      });
+    }
+  });
 
   function updateArticle(data) {
    var output = '';
    $.each(data,function(key, item) {
      output += '     <div class="feedback-item item-list media-list">';
      output += '       <div class="feedback-item media">';
+     output += ' <div class="media-left"><button id="' + key + '" class="feedback-delete btn btn-xs btn-danger"><span id="' + key + '" class="glyphicon glyphicon-remove"></span></button></div>';
      output += '         <div class="feedback-info media-body">';
      output += '           <div class="feedback-head">';
      output += '             <div class="feedback-title">' + item.title + '<small class="feedback-name label label-info"></small></div>';
