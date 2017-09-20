@@ -3,7 +3,7 @@ $(function() {
 
 //To save the article submission details
 $('.feedback-form').submit(function(e) {
-	e.preventDefault();
+  e.preventDefault();  
 	$.post('api', {
     title: $('#feedback-form-title').val(),
     authors:$('#feedback-form-author').val(),
