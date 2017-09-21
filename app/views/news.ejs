@@ -9,15 +9,15 @@
             <h1 class="feedback-form-title">Enter news details</h1>
             <form class="feedback-form">
               <div class="form-group">
-                <label for="feedback-form-title">News Title</label>
+                <label for="feedback-form-title">News Title<span style="color:red">*</span></label>
                 <input type="text" class="form-control" id="feedback-form-title" placeholder="Enter your title of the news article">
               </div>
   
               <div class="form-group">
-                <label for="feedback-form-author">News Category</label>
+                <label for="feedback-form-author">News Category<span style="color:red">*</span></label>
                 <!-- <input type="text" class="form-control" id="feedback-form-category" placeholder="Enter news category">                               -->
                 <select name="feedback-form-category" class="form-control" id="feedback-form-category" placeholder="Enter news category">
-                  <option selected="true" class="form-control" style="color:#ccc;">---Enter news category---</option>
+                  <option selected="true" class="form-control" style="font-color:#ccc;">-------------------Select-------------------------</option>
                   <option value="Software Architecture">Software Architecture</option>
                   <option value="Software Development">Software Development</option>
                   <option value="Programming">Programming</option>
@@ -27,10 +27,10 @@
                 </select>
               </div>              
              <div class="form-group">
-                  <label for="feedback-form-message">Message Description</label>
+                  <label for="feedback-form-message">Message Description<span style="color:red">*</span></label>
                   <textarea type="text" placeholder="Enter your message / comments, then hit the submit"  class="form-control" id="feedback-form-message" rows="6"></textarea>
               </div>
-              <button type="submit" class="btn btn-default pull-right" style="margin-bottom:50px;">Submit</button>              
+              <button type="submit" class="btn btn-default pull-right" style="margin-bottom:50px;background:#01AAA3;color:white;">Submit</button>              
             </form>
           </div><!-- primary -->
           <aside class="col-sm-6">

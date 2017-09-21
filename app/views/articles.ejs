@@ -9,12 +9,12 @@
             <h1 class="feedback-form-title">Fill up article submission form</h1>
             <form class="feedback-form">
               <div class="form-group">
-                <label for="feedback-form-title">Title</label>
+                <label for="feedback-form-title">Title<span style="color:red">*</span></label>
                 <input type="text" class="form-control" id="feedback-form-title" placeholder="Enter your title of the article">
               </div>
   
               <div class="form-group">
-                <label for="feedback-form-author">Author/s</label>
+                <label for="feedback-form-author">Author/s<span style="color:red">*</span></label>
                 <input type="text" class="form-control" id="feedback-form-author" placeholder="Enter author/s name">
                
                 <!-- <input type="hidden" name="count" value="1" />
@@ -29,18 +29,18 @@
               </div>
 
               <div class="form-group">
-                <label for="feedback-form-year">Year of Publication</label>
+                <label for="feedback-form-year">Year of Publication<span style="color:red">*</span></label>
                 <input class="date-own form-control" class="form-control" id="feedback-form-year" style="width: 150px;" type="text" placeholder="Select the year of article published">
               </div>
              
   
               <div class="form-group">
-                <label for="feedback-form-month">Month of Publication</label>
+                <label for="feedback-form-month">Month of Publication<span style="color:red">*</span></label>
                 <input class="month-own form-control" class="form-control" id="feedback-form-month" style="width: 150px;" type="text" placeholder="Select the month of article published">
               </div>
 
               <div class="form-group">
-                <label for="feedback-form-source">Source (Publisher)</label>
+                <label for="feedback-form-source">Source (Publisher)<span style="color:red">*</span></label>
                 <input type="text" class="form-control" id="feedback-form-source" placeholder="Source of the article">
               </div>
 
@@ -48,20 +48,18 @@
                 <label for="feedback-form-doi">DOI (link)</label>
                 <input type="text" class="form-control" id="feedback-form-doi" placeholder="DOI link">
               </div>
-
+              <div class="form-group">
+                  <label for="feedback-form-volume">Volume</label>
+                  <input type="text" class="form-control" id="feedback-form-volume" placeholder="Volume" style="width: 150px;">
+                </div>
               <div class="form-group">
                 <label for="feedback-form-number">Number</label>
                 <input type="text" class="form-control" id="feedback-form-number" placeholder="Number"style="width: 150px;">
-              </div>
-
-              <div class="form-group">
-                <label for="feedback-form-volume">Volume</label>
-                <input type="text" class="form-control" id="feedback-form-volume" placeholder="Volume" style="width: 150px;">
-              </div>
+              </div>              
 
               <div class="form-group">
                 <label for="feedback-form-pagenumbers">Page Numbers</label>
-                <input type="text" class="form-control" id="feedback-form-pagenumbers" placeholder="Page number" style="width: 150px;">
+                <input type="text" class="form-control" id="feedback-form-pagenumbers" placeholder="Page number" style="width: 150px;color: #01AAA3">
               </div>
 
              <!--  <div class="form-group">
@@ -73,7 +71,7 @@
                   <label for="feedback-form-message">Comments</label>
                   <textarea type="text" placeholder="Enter your message / comments, then hit the submit"  class="form-control" id="feedback-form-message" rows="6"></textarea>
               </div> -->
-              <button type="submit" class="btn btn-default pull-right" style="margin-bottom:50px;">Submit</button>              
+              <button type="submit" class="btn btn-default pull-right" style="margin-bottom:50px;background:#01AAA3;color:white;">Submit</button>              
             </form>
           </div><!-- primary -->
           <aside class="col-sm-6">
