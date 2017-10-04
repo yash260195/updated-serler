@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+  <head><% include partials/template/head.ejs %></head>
+  <body id="<%= pageID %>">
+      <% include partials/template/header.ejs %>
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-6">
+            <h1 class="feedback-form-title">Evidences</h1>
+            <form class="feedback-form">
+                <div class="form-group">
+                    <label for="feedback-form-ID">ID<span style="color:red"></span></label>
+                    <input type="text" class="form-control" id="feedback-form-id" placeholder="ID" style="width:75px;">
+                  </div>
+                  <div class="form-group">
+                      <label for="feedback-form-rtitle">Title<span style="color:red">*</span></label>
+                      <input type="text" class="form-control" id="feedback-form-rtitle" placeholder="Title">
+                    </div>
+              <div class="form-group">
+                <label for="feedback-form-rquestion">Research Question<span style="color:red">*</span></label>
+                <input type="text" class="form-control" id="feedback-form-rquestion" placeholder="research questions">
+              </div>
+  
+              <div class="form-group">
+                <label for="feedback-form-rmethod">Research Method<span style="color:red">*</span></label>
+                <input type="text" class="form-control" id="feedback-form-rmethod" placeholder="research method">               
+                
+              </div>
+
+              <div class="form-group">
+                <label for="feedback-form-rmetric">Research Metrics<span style="color:red">*</span></label>
+                <input class="form-control" id="feedback-form-rmetric" type="text" placeholder="research metrics">
+              </div>
+             
+  
+              <div class="form-group">
+                <label for="feedback-form-rparticipants">Research Participants<span style="color:red">*</span></label>
+                <input class="form-control" id="feedback-form-rparticipants" type="text" placeholder="participants">
+              </div>
+
+              <div class="form-group">
+                <label for="feedback-form-ebenefit">Benefit<span style="color:red">*</span></label>
+                <input type="text" class="form-control" id="feedback-form-ebenefit" placeholder="benefit / outcome of test">
+              </div>
+
+              <div class="form-group">
+                <label for="feedback-form-econtext">Context</label>
+                <input type="text" class="form-control" id="feedback-form-econtext" placeholder="evidence context">
+              </div>
+              <div class="form-group">
+                  <label for="feedback-form-eresult">Result</label>
+                  <input type="text" class="form-control" id="feedback-form-eresult" placeholder="Volume">
+                </div>
+                   
+              <button type="submit" class="btn btn-default pull-right" style="margin-bottom:50px;background:#01AAA3;color:white;">Submit</button>              
+            </form>
+          </div><!-- primary -->
+          <aside class="col-sm-6">
+            <div class="maincontent feedback">
+                <h2 class="article-title">Recent Evidences</h2>
+                <div class="feedback-messages"></div>
+            </div>
+          </aside><!-- secondary -->
+        </div>
+      </div><!-- container -->
+    <% include partials/template/jsdefaults.ejs %>    
+  </body>
+</html>
