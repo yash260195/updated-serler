@@ -4,7 +4,8 @@
   "description": "\"# serlerrepo\"",
   "main": "app/app.js",
   "engines": {
-    "node": "6.11.3"
+    "node": "6.11.3",
+    "npm": "3.10.10"
   },
   "scripts": {
     "start": "nodemon -e css,ejs,js,json --watch app --ignore articlesubmitted.json"
