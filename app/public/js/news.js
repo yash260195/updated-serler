@@ -23,7 +23,7 @@ $('.feedback-form').submit(function(e) {
 
 //To delete from news
 $('.feedback-messages').on('click', function(e) {
-  if(e.target.className == "feedback-delete btn btn-xs btn-danger") {
+  if(e.target.className == "glyphicon glyphicon-remove") {
      $.ajax({
      url: 'apinews/' + e.target.id,
      type: 'DELETE',

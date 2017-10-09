@@ -5,12 +5,17 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.5.0/js/bootstrap-datepicker.js"></script>
 
 
-<script type="text/javascript">
+<!-- <script type="text/javascript">
     $("#feedback-form-month").datepicker({        
         minViewMode: "months",
         startView: "months",
         format: 'MM'    
     });
+</script> -->
+<script type="text/javascript">
+    var today = new Date().toLocaleDateString();
+    document.getElementById('time').innerHTML=today;
+    document.getElementById('feedback-form-currentdate').value=today;
 </script>
 
 <style type="text/css">
@@ -25,3 +30,4 @@
     }
     h1, h2, h3, h4, h5, h6 {color: #01AAA3;}
 </style>
+

@@ -9,9 +9,14 @@
             <h1 class="feedback-form-title">Evidences</h1>
             <form class="feedback-form">
                 <div class="form-group">
+                    <div class="form-group">
+                        Today's date: <span id="time"></span>   
+                        <input type="hidden" class="form-control" id="feedback-form-currentdate">
+                    </div>
                     <label for="feedback-form-ID">ID<span style="color:red"></span></label>
                     <input type="text" class="form-control" id="feedback-form-id" placeholder="ID" style="width:75px;">
                   </div>
+                  
                   <div class="form-group">
                       <label for="feedback-form-rtitle">Title<span style="color:red">*</span></label>
                       <input type="text" class="form-control" id="feedback-form-rtitle" placeholder="Title">
@@ -23,7 +28,15 @@
   
               <div class="form-group">
                 <label for="feedback-form-rmethod">Research Method<span style="color:red">*</span></label>
-                <input type="text" class="form-control" id="feedback-form-rmethod" placeholder="research method">               
+                <!-- <input type="text" class="form-control" id="feedback-form-rmethod" placeholder="research method">                -->
+                <select name="feedback-form-category" class="form-control" id="feedback-form-rmethod" placeholder="Enter news category">
+                  <option selected="true" class="form-control" style="font-color:#ccc;width:250px;">----------Select----------</option>
+                  <option value="Case Study">Case Study</option>
+                  <option value="Field Observation">Field Observation</option>
+                  <option value="Experiment">Experiment</option>
+                  <option value="Interview">Interview</option>
+                  <option value="Survey">Survey</option>                  
+                </select>
                 
               </div>
 
@@ -35,9 +48,58 @@
   
               <div class="form-group">
                 <label for="feedback-form-rparticipants">Research Participants<span style="color:red">*</span></label>
-                <input class="form-control" id="feedback-form-rparticipants" type="text" placeholder="participants">
+                <!-- <input class="form-control" id="feedback-form-rparticipants" type="text" placeholder="participants"> -->
+                <select name="feedback-form-category" class="form-control" id="feedback-form-rparticipants" placeholder="Enter news category">
+                  <option selected="true" class="form-control" style="font-color:#ccc;width:250px;">----------Select----------</option>
+                  <option value="Undergraduate Students">Undergraduate Students</option>
+                  <option value="Postgraduate Students">Postgraduate Students</option>
+                  <option value="Practitioners">Practitioners</option>            
+                </select>
               </div>
-
+              <div class="form-group">
+                <label for="feedback-form-rparticipants">SE Method<span style="color:red">*</span></label>
+                <select name="feedback-form-category" class="form-control" id="feedback-form-semethod" placeholder="Enter news category">
+                  <option selected="true" class="form-control" style="font-color:#ccc;width:250px;">----------Select----------</option>
+                  <option value="TDD">TDD</option>
+                  <option value="BDD">BDD</option>
+                  <option value="Pair Programming">Pair Programming</option>
+                  <option value="Planning Poker">Planning Poker</option>
+                  <option value="Daily Standup Meetings">Daily Standup Meetings</option>
+                  <option value="Storyboards">Storyboards</option>
+                  <option value="User Story mapping">User Story mapping</option>
+                  <option value="Continuous Integration">Continuous Integration</option>
+                  <option value="Retrospectives">Retrospectives</option>
+                  <option value="Burndown Charts">Burndown Charts</option>
+                  <option value="Requirements Prioritization">Requirements Prioritization</option>
+                  <option value="Version Control">Version Control</option>
+                  <option value="Code Sharing">Code Sharing</option>           
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="feedback-form-rparticipants">SE Methodology<span style="color:red">*</span></label>
+               
+                <select name="feedback-form-category" class="form-control" id="feedback-form-semethodology" placeholder="Enter news category">
+                  <option selected="true" class="form-control" style="font-color:#ccc;width:250px;">----------Select----------</option>
+                  <option value="SCRUM">SCRUM</option>
+                  <option value="Waterfall">Waterfall</option>
+                  <option value="Spiral">Spiral</option>
+                  <option value="XP">XP</option>
+                  <option value="Rational Unified Process">Rational Unified Process</option>
+                  <option value="Crystal">Crystal</option>
+                  <option value="Clean Room">Clean Room</option>
+                  <option value="Feature Driven Development">Feature Driven Development</option>
+                  <option value="Model Driven Development">Model Driven Development</option>
+                  <option value="Domain Driven Development">Domain Driven Development</option>
+                  <option value="Formal Methods">Formal Methods</option>
+                  <option value="Problem Driven Development">Problem Driven Development</option>
+                  <option value="Cloud Computing">Cloud Computing</option>
+                  <option value="Service Oriented Development">Service Oriented Development</option>
+                  <option value="Aspect Oriented Development">Aspect Oriented Development</option>
+                  <option value="Value Driven Development">Value Driven Development</option>
+                  <option value="Product Driven Development">Product Driven Development</option>
+                  <option value="Agile">Agile</option>                                           
+                </select>
+              </div>
               <div class="form-group">
                 <label for="feedback-form-ebenefit">Benefit<span style="color:red">*</span></label>
                 <input type="text" class="form-control" id="feedback-form-ebenefit" placeholder="benefit / outcome of test">
@@ -57,12 +119,13 @@
           </div><!-- primary -->
           <aside class="col-sm-6">
             <div class="maincontent feedback">
-                <h2 class="article-title">Recent Evidences</h2>
+                <h2 class="article-title">Recent Evidences for articles</h2>
                 <div class="feedback-messages"></div>
             </div>
           </aside><!-- secondary -->
         </div>
       </div><!-- container -->
     <% include partials/template/jsdefaults.ejs %>    
+    <!-- <% include partials/template/monthpicker.ejs %>    -->
   </body>
 </html>

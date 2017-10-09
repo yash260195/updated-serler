@@ -11,9 +11,12 @@ $(function() {
         RMethod:$('#feedback-form-rmethod').val(),
         RMetrics:$('#feedback-form-rmetric').val(),
         Rparticipants:$('#feedback-form-rparticipants').val(),
+        SEMethod:$('#feedback-form-semethod').val(),
+        SEMethodology:$('#feedback-form-semethodology').val(),
         EBenefit: $('#feedback-form-ebenefit').val(),
         EContext:$('#feedback-form-econtext').val(),
-        EResult:$('#feedback-form-eresult').val()      
+        EResult:$('#feedback-form-eresult').val(),
+        currentdate: $('#feedback-form-currentdate').val()      
     }, updateEvidence);
     clearArticle();
   });
@@ -25,6 +28,8 @@ $(function() {
     document.querySelector('#feedback-form-rmethod').value='';
     document.querySelector('#feedback-form-rmetric').value='';
     document.querySelector('#feedback-form-rparticipants').value='';
+    document.querySelector('#feedback-form-semethod').value='';
+    document.querySelector('#feedback-form-semethodology').value='';
     document.querySelector('#feedback-form-ebenefit').value='';
     document.querySelector('#feedback-form-econtext').value='';
     document.querySelector('#feedback-form-eresult').value='';
@@ -32,7 +37,7 @@ $(function() {
   
   //To delete from recent submission
   $('.feedback-messages').on('click', function(e) {
-     if(e.target.className == "feedback-delete btn btn-xs btn-danger") {
+     if(e.target.className == "glyphicon glyphicon-remove") {
         $.ajax({
         url: 'apievidence/' + e.target.id,
         type: 'DELETE',
@@ -50,8 +55,9 @@ $(function() {
        output += '         <div class="feedback-info media-body">';
        output += '           <div class="feedback-head">';
       //  output += '             <div class="feedback-title">' + item.title + '<small class="feedback-name label label-info"></small></div>';
-       output += '<div class="feedback-title">' + item.ID + '  ' +  item.Title +'  '+ '  <small class="feedback-name label label-info"> ' + '<a href="'+ key + '" class="label label-info">Edit</a>' + '</small></div>';
+       output += '<div class="feedback-title" >' + item.ID + '  ' +  item.Title +'  '+ '  <small class="feedback-name label label-info" style="display:none;"> ' + '<a href="'+ key + '" class="label label-info">Edit</a>' + '</small></div>';
        output += '           </div>';
+       output += '           <div class="feedback-message" style="color:#01AAA3;"> Date Submitted: ' + item.currentdate + '</div>';
        output += '           <div class="feedback-message">' + item.RQuestion + '</div>';
        output += '         </div>';
        output += '       </div>';

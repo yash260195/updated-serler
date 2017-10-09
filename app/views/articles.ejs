@@ -7,7 +7,11 @@
         <div class="row">
           <div class="col-sm-6">
             <h1 class="feedback-form-title">Fill up article submission form</h1>
-            <form class="feedback-form">
+            <form class="feedback-form">                
+                <div class="form-group">
+                    Today's date: <span id="time"></span>   
+                    <input type="hidden" class="form-control" id="feedback-form-currentdate">
+                </div>
               <div class="form-group">
                 <label for="feedback-form-title">Title<span style="color:red">*</span></label>
                 <input type="text" class="form-control" id="feedback-form-title" placeholder="Enter your title of the article">
@@ -29,6 +33,11 @@
               </div>
 
               <div class="form-group">
+                <label for="feedback-form-date">Date of Publication<span style="color:red">*</span></label>
+                <input class="form-control" id="date" name="date" placeholder="MM/DD/YYYY" type="text"/>
+              </div>
+
+              <!-- <div class="form-group">
                 <label for="feedback-form-year">Year of Publication<span style="color:red">*</span></label>
                 <input class="date-own form-control" class="form-control" id="feedback-form-year" style="width: 150px;" type="text" placeholder="Select the year of article published">
               </div>
@@ -37,7 +46,7 @@
               <div class="form-group">
                 <label for="feedback-form-month">Month of Publication<span style="color:red">*</span></label>
                 <input class="month-own form-control" class="form-control" id="feedback-form-month" style="width: 150px;" type="text" placeholder="Select the month of article published">
-              </div>
+              </div> -->
 
               <div class="form-group">
                 <label for="feedback-form-source">Source (Publisher)<span style="color:red">*</span></label>
@@ -83,8 +92,10 @@
         </div>
       </div><!-- container -->
     <% include partials/template/jsdefaults.ejs %>
-    <% include partials/template/yearpicker.ejs %>
-    <% include partials/template/monthpicker.ejs %>  
-    <% include partials/template/multipleauthor.ejs %>  
+    <!-- <% include partials/template/yearpicker.ejs %>-->
+    <!-- <% include partials/template/monthpicker.ejs %>    -->
+    
+    <% include partials/template/datepicker.ejs %>  
+  
   </body>
 </html>
