@@ -26,6 +26,7 @@
     "express": "^4.15.4",
     "express-validator": "^4.1.1",
     "json-loader": "^0.5.7",
+    "nodemon": "^1.12.1",
     "reload": "^2.2.2"
   }
 }
